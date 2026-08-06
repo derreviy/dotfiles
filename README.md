@@ -55,26 +55,9 @@ funcsave config
 Выполняем «распаковку»:
 
 ```fish
-config checkout
+mkdir -p .dotfiles-backup; and for f in (config checkout 2>&1 | string match -r '\s+\K\..*'); mkdir -p .dotfiles-backup/(dirname $f); mv $f .dotfiles-backup/$f; end
 
 ```
-
-> **ВАЖНО (Конфликты файлов):**
-> При чистой установке CachyOS уже создаст дефолтные файлы (например, `.bashrc` или конфиг Fish). Git откажется разворачивать конфиги поверх них.
-> **Если `config checkout` выдал ошибку**, перемести старые дефолтные файлы в бэкап-папку этой строчкой:
-> ```fish
-> mkdir -p .dotfiles-backup; and config checkout 2>&1 | string match -r '^\s+(\..*)' --entire -f | xargs -I{} mv {} .dotfiles-backup/{}
-> 
-> ```
-> 
-> 
-> И повтори распаковку:
-> ```fish
-> config checkout
-> 
-> ```
-> 
-> 
 
 ---
 
