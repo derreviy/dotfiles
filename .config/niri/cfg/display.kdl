@@ -8,6 +8,7 @@
 //    scale 1 // No scaling (use 2 for HiDPI)
 //}
 output "DP-3" {
+    mode "2560x1440@165.000"
     position x=0 y=0
 }
 
