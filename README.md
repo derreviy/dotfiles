@@ -55,7 +55,7 @@ funcsave config
 Выполняем «распаковку»:
 
 ```fish
-mkdir -p .dotfiles-backup; and for f in (config checkout 2>&1 | string match -r '\s+\K\..*'); mkdir -p .dotfiles-backup/(dirname $f); mv $f .dotfiles-backup/$f; end
+mkdir -p .dotfiles-backup; and for f in (config checkout 2>&1 | string match -r '\s+\K\..*'); mkdir -p .dotfiles-backup/(dirname $f); mv $f .dotfiles-backup/$f; end; and config checkout
 
 ```
 
