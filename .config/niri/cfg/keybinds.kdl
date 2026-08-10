@@ -2,10 +2,10 @@ binds {
     // ────────────── Приложения и запуск ──────────────
     Mod+T                               hotkey-overlay-title="Open Terminal" { spawn "alacritty"; }
     Mod+Space                           hotkey-overlay-title="Launcher" { spawn "noctalia" "msg" "panel-toggle" "launcher"; }
-    Mod+B                               hotkey-overlay-title="Open Browser" { spawn "chrome" "thorium"; }
-    Mod+E                               hotkey-overlay-title="File Manager" { spawn "thunar"; }
-    Mod+ALT+L                           hotkey-overlay-title="Lock Screen"
-    Mod+Shift+Q                         hotkey-overlay-title="Session Menu"
+    Mod+B                               hotkey-overlay-title="Open Browser" { spawn "firefox"; }
+    Mod+E                               hotkey-overlay-title="File Manager" { spawn "nautilus"; }
+//    Mod+ALT+L                           hotkey-overlay-title="Lock Screen"
+//    Mod+Shift+Q                         hotkey-overlay-title="Session Menu"
 
     // ────────────── Мультимедиа и Яркость ──────────────
     XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
