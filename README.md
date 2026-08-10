@@ -72,10 +72,4 @@ config config --local status.showUntrackedFiles no
 
 **Готово!** Твои настройки Vim, Niri и других утилит снова на месте.
 
-Если решишь докинуть туда еще и автоустановку пакетов из твоего pkglist.txt, в README можно будет просто добавить одну строчку для разворачивания всего софта в CachyOS:
-
-Фрагмент кода
-
-sudo pacman -S --needed - < pkglist.txt
-
-Теперь репозиторий полностью готов и задокументирован.
+Remember about kitty!!!
